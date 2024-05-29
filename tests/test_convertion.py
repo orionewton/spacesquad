@@ -30,7 +30,15 @@ def setup_files():
     # Exemple de fichier .pdf pour les tests
     with open(os.path.join(SOURCE_DIR, 'test.pdf'), 'w') as f:
         f.write(
-            '%PDF-1.4\n1 0 obj\n<<\n/Type /Catalog\n/Pages 2 0 R\n>>\nendobj\n2 0 obj\n<<\n/Type /Pages\n/Kids [3 0 R]\n/Count 1\n>>\nendobj\n3 0 obj\n<<\n/Type /Page\n/Parent 2 0 R\n/MediaBox [0 0 612 792]\n/Contents 4 0 R\n/Resources <<\n/Font <<\n/F1 5 0 R\n>>\n>>\n>>\nendobj\n4 0 obj\n<<\n/Length 44\n>>\nstream\nBT\n/F1 24 Tf\n100 700 Td\n( Titre de l\'article ) Tj\nET\nendstream\nendobj\n5 0 obj\n<<\n/Type /Font\n/Subtype /Type1\n/BaseFont /Helvetica\n>>\nendobj\nxref\n0 6\n0000000000 65535 f\n0000000010 00000 n\n0000000053 00000 n\n0000000103 00000 n\n0000000194 00000 n\n0000000314 00000 n\ntrailer\n<<\n/Root 1 0 R\n>>\nstartxref\n364\n%%EOF')
+            '%PDF-1.4\n1 0 obj\n<<\n/Type /Catalog\n/Pages 2 0 R\n>>\nendobj\n2 0 obj\n<<\n'
+            '/Type /Pages\n/Kids [3 0 R]\n/Count 1\n>>\nendobj\n3 0 obj\n<<\n/Type /Page\n'
+            '/Parent 2 0 R\n/MediaBox [0 0 612 792]\n/Contents 4 0 R\n/Resources <<\n'
+            '/Font <<\n/F1 5 0 R\n>>\n>>\n>>\nendobj\n4 0 obj\n<<\n/Length 44\n>>\n'
+            'stream\nBT\n/F1 24 Tf\n100 700 Td\n( Titre de l\'article ) Tj\nET\nendstream\n'
+            'endobj\n5 0 obj\n<<\n/Type /Font\n/Subtype /Type1\n/BaseFont /Helvetica\n>>\n'
+            'endobj\nxref\n0 6\n0000000000 65535 f\n0000000010 00000 n\n0000000053 00000 n\n'
+            '0000000103 00000 n\n0000000194 00000 n\n0000000314 00000 n\ntrailer\n<<\n'
+            '/Root 1 0 R\n>>\nstartxref\n364\n%%EOF')
 
     yield
 
