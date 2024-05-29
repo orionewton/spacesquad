@@ -1,0 +1,34 @@
+name: Convert Documents to HTML
+
+on:
+  push:
+    paths:
+      - 'source_documents/**'
+      - 'convert_to_html.py'
+      - 'tests/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+    - name: Install dependencies
+      run: |
+        pip install odfpy pymupdf pytest
+    - name: Run conversion script
+      run: python convert_to_html.py
+    - name: Run tests
+      run: pytest tests/test_conversion.py
+    - name: Commit and push changes
+      if: success()
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git add templates/wiki/*
+        git commit -m 'Auto-generated HTML from ODT/PDF'
+        git push
