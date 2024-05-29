@@ -21,7 +21,7 @@ jobs:
       run: |
         pip install odfpy pymupdf pytest
     - name: Run conversion script
-      run: python convert_to_html.py
+      run: python convert.py
     - name: Run tests
       run: pytest tests/test_conversion.py
     - name: Commit and push changes
