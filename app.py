@@ -11,7 +11,8 @@ app = Flask(__name__)
 
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'ods'}
-
+BASE_DIR = os.path.dirname(__file__)
+IMG_DIR = os.path.join(BASE_DIR, "static", "images")
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 

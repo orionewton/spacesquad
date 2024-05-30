@@ -1,9 +1,9 @@
 import os
 import re
+from app import IMG_DIR as IMAGE_DIR
 
 SOURCE_DIR = 'source_documents'
 DEST_DIR = 'templates/wiki'
-IMAGE_DIR = 'source_images'
 
 
 class Content:
@@ -32,7 +32,7 @@ class Content:
             elif line.startswith("#"):
                 line = line.strip()
                 image_name = line.replace("#", "")
-                parag += f'<img src="/{IMAGE_DIR}/{image_name}" alt="{image_name}">\n'
+                parag += f'<img src="{os.path.join(IMAGE_DIR, image_name)}" alt="{image_name}">\n'
             else:
                 parag += line
         self.parag.append([title, parag])
@@ -59,9 +59,14 @@ class Content:
             self.intro = self.process_links(self.intro)
 
     def generate_html(self):
-        html_content = (f'<!DOCTYPE html>\n<html lang="fr">\n'
-                        f'<head>\n<meta charset="UTF-8">\n'
-                        f'<title>{self.title}</title>\n</head>\n<body>\n')
+        html_content = f'<!DOCTYPE html>\n<html lang="fr">\n<head>\n<meta charset="UTF-8">\n<title>{self.title}</title>\n'
+        html_content += ('<style>header { display: flex; align-items: center; padding: 10px; } '
+                         'header img { height: 50px; margin-right: 10px; } </style>\n')
+        html_content += '</head>\n<body>\n'
+        html_content += '<header>\n'
+        html_content += f'<a href="/"><img src="/{IMAGE_DIR}/Logo.png" alt="Logo"></a>\n'
+        html_content += '<h1>Space Squad</h1>\n'
+        html_content += '</header>\n'
         html_content += f'<h1>{self.title}</h1>\n<p><em>Par {self.author}</em></p>\n'
         if self.intro:
             html_content += f'<p>{self.intro}</p>\n'
