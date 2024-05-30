@@ -51,7 +51,7 @@ def test_content_parsing(setup_files):
     assert content.parag[1] == ['Sous-titre 2', 'Paragraphe 2 avec un autre lien @là@link2.html@\n']
 
     content.convert_link()
-    assert content.intro == 'Introduction Un lien vers un autre href="/templates/wiki/link.html">article</a>'
+    assert content.intro == 'Introduction Un lien vers un autre <a href="/templates/wiki/link.html">article</a>'
     assert content.parag[0] == ['Sous-titre 1',
                                 'Paragraphe 1 avec une image\n'
                                 '<img src="/source_images/image1.png" alt="image1.png">\n'
