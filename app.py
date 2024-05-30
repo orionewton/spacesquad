@@ -3,6 +3,8 @@ import os
 from werkzeug.utils import secure_filename
 import logging
 
+from convert import convert_files
+
 logging.basicConfig(filename='app.log', level=logging.ERROR, format='%(asctime)s %(levelname)s:%(message)s')
 
 app = Flask(__name__)
@@ -14,6 +16,7 @@ ALLOWED_EXTENSIONS = {'ods'}
 BASE_DIR = os.path.dirname(__file__)
 IMG_DIR = os.path.join(BASE_DIR, "static", "images")
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+convert_files()
 
 
 def allowed_file(filename):
