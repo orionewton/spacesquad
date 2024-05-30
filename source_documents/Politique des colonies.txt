@@ -1,0 +1,33 @@
+Orion le MJ
+Politique des colonies
+**Fondation**
+Lorsqu'une planète est colonisée, la première ville est nommée capitale.
+L'@Union@Organisations@ y affecte un Pionnier et son équipe afin de préparer l'arrivée des colons.
+Lorsque les colons sont suffisamment nombreux pour avoir une société stable, le Pionnier doit désigner ou faire désigner un gouvernement.
+Le gouvernement prend alors le contrôle de la colonie, et le Pionnier peut retourner à ses occupations.
+**Politique locale**
+Chaque gouvernement de chaque colonie est libre d'appliquer n'importe quelle forme de politique locale à deux conditions:
+- Tout citoyen doit être libre de pouvoir quitter la colonie avec ses biens en toute sécurité.
+- Aucune loi ne pourra outrepasser le Code Civil d'Alcor (CCA).
+Chaque colonie peut donc avoir un système politique différent, et quand bien même les démocraties sont les plus répandues, il existe aussi des aristocraties, oligarchies, etc.
+Chaque gouvernement est chargé de la gestion de toute la colonie, s'il y a plusieurs villes, elles sont sous l'autorité de la capitale.
+Ainsi, chaque transaction interne à la colonie est géré par le gouvernement qui peut même créer sa propre monnaie et établir les valeurs marchandes de tout produit.
+En revanche, dès qu'un objet entre ou sort de la colonie, il est régie par les lois commerciales de la Guilde.
+De même, le gouvernement est en charge de la "police", ou sécurité intérieure, mais cette force doit opérer dans le respect du CCA et uniquement localement.
+Les forces de police ont une autorité limitée à leur planète, voire système si accord avec d'autres colonies.
+Autrement, et en toutes circonstances, ces forces sont considérées comme civils par l'Alliance.
+Chaque ville se doit de fournir au moins six bâtiments essentiels avant de pouvoir recevoir des colons en masse :
+- Siège local du gouvernement planétaire
+- Garnison de l'Alliance comportant une réserve de matériel
+- Centre de transit de l'Union avec une zone de débarquement
+- Poste de la Guilde pour les échanges extra-planétaire
+- Bureau du Consortium dont le tableau des missions et un terminal
+- @Tribunal d'Alcor@Tribunal d'Alcor@ responsable de la justice
+**Population**
+Lorsqu'un premier gouvernement se met en place dans une colonie, l'Union ajoute cette destination à tous les colons potentiels.
+Il y est décrit le système politique à venir, la distance de la colonie avec les grands spatioports des environs, et l'@indice de viabilité@Indice de viabilité@ de la planète.
+L'indice de viabilité détermine le nombre d'habitants possible par colonie et les infrastructures nécessaires à son fonctionnement.
+**Justice**
+Toutes les affaires judiciaires sont appliquées par le Tribunal.
+Chaque procès est dirigé par un juge appliquant le CCA, et un adjoint appliquant les lois locales.
+Pour plus de détails, voir le @Tribunal d'Alcor@Tribunal d'Alcor@.

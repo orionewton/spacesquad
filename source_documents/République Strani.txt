@@ -1,0 +1,42 @@
+Orion le MJ
+République Strani
+**Histoire**
+La république @Strani@Stranis@ tel qu'elle existe aujourd'hui a été fondée en l'an terrestre 2124 (@c-88@Calendrier Galactique@). Elle verra la rébellion des Tr'Trari en 2170 (@c-45@Calendrier Galactique@) et la rencontre avec l'humanité en 2214 (@c-4@Calendrier Galactique@). Ce système a prouvé sa stabilité dans la société Strani, et quand bien même il a des détracteurs, la majorité de la population le soutient.
+**Fonctionnement**
+Il existe plusieurs partis politiques qui comme pour les humains ont des similitudes et des points de divergences.
+Chaque parti est dirigé par un conseil élu par les membres, et chaque conseil désigne un représentant.
+Lorsqu'une élection a lieu, chaque citoyen vote pour l'un des partis présents.
+A la suite de ce tour, le parti ayant reçu le moins de voix est éliminé et on passe au tour suivant, et ainsi de suite jusqu'à ce qu'il ne reste plus qu'un parti.
+Le représentant du Parti restant devient Président pour une durée indéterminée. Ce dernier a les pleins pouvoirs hormis sur deux choses : la loi, et la constitution, tout changement dans la loi ou la constitution doit être approuvé par l'assemblée.
+A la suite des résultats du premier tour, une assemblée est formée à la proportionnelle.
+L'assemblée est élue pour un mandat de 4 ans, celle-ci peut à tout moment demander un référendum pour valider la position du président (sur un projet spécifique, ou bien sur son mandat de manière générale).
+Si le peuple s'oppose au président, ce dernier doit stopper son projet ou bien démissioner, une nouvelle élection aura alors lieu.
+Les votes blancs et les votes non exprimés sont cumulés pour former une part de l'assemblée avec des citoyens tirés au hasard sur une liste de volontaires.
+Ces votes ne sont plus comptabilisés après le premier tour.
+**Les grands partis**
+Il existe trois grands partis politiques ayant chacun dirigé à plusieurs reprises depuis sa création.
+Chacun de ces partis est basé sur l'une des valeurs fondamentales de la République : Équité, Contrôle et Liberté.
+Équité :
+Le parti de l'équité veut donner à chaque Strani le nécessaire pour pouvoir vivre une vie décente, certains ont besoin de plus, d'autres de moins, aussi, il n'est pas question ici d'égalité (donner la même chose à chacun), mais bien d'équité (donner le nécessaire à chacun pour arriver au même point).
+Contrôle :
+Le parti du contrôle cherche à encadrer les actions de chacun, il s'appuie sur les traditions et le respect de l'autre. Il a tendance à lancer de grands projets fédérateurs que ce soit au niveau national comme extra-racial.
+Liberté :
+Le parti de la liberté cherche à émanciper les citoyens de toute forme de soutien.
+L'autonomie de l'individu est mise en avant afin qu'il puisse vivre selon ses propres choix.
+A eux trois, ils comptabilisent en moyenne 64% des voix, le reste allant à un vote blanc (10%) ou des partis plus petits principalement présents à l'Assemblée.
+En cette année 2576 (@c332@Calendrier Galactique@), c'est le parti de l'Équité qui gouverne depuis 7 ans terrestres (6,5 cycles).
+**Ministères**
+Lorsqu'un parti arrive au pouvoir, il doit nommer des ministres, les ministères et leurs fonctions sont figés par la Constitution.
+Le Parti au pouvoir peut nommer jusqu'à 5 de ses membres comme ministres, les autres postes doivent être proposés à au moins deux autres partis (présents à l'assemblée avec au moins 5%).
+Liste des ministères :
+    • Agriculture
+    • Armée
+    • Culture
+    • Économie
+    • Éducation
+    • Justice
+    • Santé
+    • Travail
+    • Diplomatie
+    • Recherche
+Le budget des ministères est proposé par le président et accepté ou débattu puis accepté par l'Assemblée.
