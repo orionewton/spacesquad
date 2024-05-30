@@ -38,9 +38,19 @@ class Content:
         self.parag.append([title, parag])
 
     @staticmethod
-    def process_links(text):
-        link_pattern = r'@([^@]+)@([^@]+)@'
-        return re.sub(link_pattern, f'<a href="/{DEST_DIR}/' + r'\2">\1</a>', text)
+    def process_links(texte):
+        def remplacement(match):
+            mot = match.group(1)
+            lien = match.group(2)
+            lien_formatte = f'<a href="/{DEST_DIR}/{lien.replace(" ", "%20")}.html">{mot}</a>'
+            return lien_formatte
+
+        pattern = r'@([^@]+)@([^@]+)@'
+        texte_transforme = re.sub(pattern, remplacement, texte)
+
+        return texte_transforme
+        # link_pattern = r'@([^@]+)@([^@]+)@'
+        # return re.sub(link_pattern, rf'<a href="/{DEST_DIR}/\2">\1</a>', text)
 
     def convert_link(self):
         for text in self.parag:

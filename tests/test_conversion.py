@@ -17,13 +17,13 @@ def setup_files():
     # Exemple de fichier .txt pour les tests
     test_content = '''Auteur
 Titre
-//Introduction Un lien vers un autre @article@link.html@//
+//Introduction Un lien vers un autre @article@link@//
 **Sous-titre 1**
 Paragraphe 1 avec une image
 #image1.png#
-et un lien @ici@ici.html@
+et un lien @ici@ici@
 **Sous-titre 2**
-Paragraphe 2 avec un autre lien @là@link2.html@
+Paragraphe 2 avec un autre lien @là@link 2@
 '''
 
     with open(os.path.join(SOURCE_DIR, 'test.txt'), 'w', encoding='utf-8') as f:
@@ -42,13 +42,13 @@ def test_content_parsing(setup_files):
     content = Content(os.path.join(SOURCE_DIR, 'test.txt'))
     assert content.author == 'Auteur'
     assert content.title == 'Titre'
-    assert content.intro == 'Introduction Un lien vers un autre @article@link.html@'
+    assert content.intro == 'Introduction Un lien vers un autre @article@link@'
     assert len(content.parag) == 2
     assert content.parag[0] == ['Sous-titre 1',
                                 'Paragraphe 1 avec une image\n'
                                 '<img src="/source_images/image1.png" alt="image1.png">\n'
-                                'et un lien @ici@ici.html@\n']
-    assert content.parag[1] == ['Sous-titre 2', 'Paragraphe 2 avec un autre lien @là@link2.html@\n']
+                                'et un lien @ici@ici@\n']
+    assert content.parag[1] == ['Sous-titre 2', 'Paragraphe 2 avec un autre lien @là@link 2@\n']
 
     content.convert_link()
     assert content.intro == 'Introduction Un lien vers un autre <a href="/templates/wiki/link.html">article</a>'
@@ -57,7 +57,7 @@ def test_content_parsing(setup_files):
                                 '<img src="/source_images/image1.png" alt="image1.png">\n'
                                 'et un lien <a href="/templates/wiki/ici.html">ici</a>\n']
     assert content.parag[1] == ['Sous-titre 2', 'Paragraphe 2 avec un autre lien '
-                                                '<a href="/templates/wiki/link2.html">là</a>\n']
+                                                '<a href="/templates/wiki/link%202.html">là</a>\n']
 
 
 def test_html_generation(setup_files):
