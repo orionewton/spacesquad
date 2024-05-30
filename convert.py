@@ -33,7 +33,7 @@ class Content:
             elif line.startswith("#"):
                 line = line.strip()
                 image_name = line.replace("#", "")
-                parag += f'<img src="{os.path.join(IMAGE_DIR, image_name)}" alt="{image_name}">\n'
+                parag += f'<img src="{os.path.join(IMG_DIR, image_name)}" alt="{image_name}">\n'
             else:
                 parag += line
         self.parag.append([title, parag])
@@ -65,7 +65,7 @@ class Content:
                          'header img { height: 50px; margin-right: 10px; } </style>\n')
         html_content += '</head>\n<body>\n'
         html_content += '<header>\n'
-        html_content += f'<a href="/"><img src="/{IMAGE_DIR}/Logo.png" alt="Logo"></a>\n'
+        html_content += f'<a href="/"><img src="/{IMG_DIR}/Logo.png" alt="Logo"></a>\n'
         html_content += '<h1>Space Squad</h1>\n'
         html_content += '</header>\n'
         html_content += f'<h1>{self.title}</h1>\n<p><em>Par {self.author}</em></p>\n'

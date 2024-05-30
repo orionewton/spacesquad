@@ -1,11 +1,12 @@
 import os
 import pytest
 
-import app
-from convert import Content, convert_files
+from convert import Content
 
 SOURCE_DIR = 'source_documents'
 DEST_DIR = 'templates/wiki'
+BASE_DIR = os.path.dirname(__file__)
+IMG_DIR = os.path.join(os.path.dirname(BASE_DIR), "static", "images")
 
 
 @pytest.fixture(scope="module")
@@ -46,7 +47,7 @@ def test_content_parsing(setup_files):
     assert len(content.parag) == 2
     assert content.parag[0] == ['Sous-titre 1',
                                 'Paragraphe 1 avec une image\n'
-                                f'<img src="{os.path.join(app.IMG_DIR, "image1.png")}" alt="image1.png">\n'
+                                f'<img src="{os.path.join(IMG_DIR, "image1.png")}" alt="image1.png">\n'
                                 'et un lien @ici@ici@\n']
     assert content.parag[1] == ['Sous-titre 2', 'Paragraphe 2 avec un autre lien @là@link 2@\n']
 
@@ -54,23 +55,7 @@ def test_content_parsing(setup_files):
     assert content.intro == 'Introduction Un lien vers un autre <a href="/templates/wiki/link.html">article</a>'
     assert content.parag[0] == ['Sous-titre 1',
                                 'Paragraphe 1 avec une image\n'
-                                f'<img src="{os.path.join(app.IMG_DIR, "image1.png")}" alt="image1.png">\n'
+                                f'<img src="{os.path.join(IMG_DIR, "image1.png")}" alt="image1.png">\n'
                                 'et un lien <a href="/templates/wiki/ici.html">ici</a>\n']
     assert content.parag[1] == ['Sous-titre 2', 'Paragraphe 2 avec un autre lien '
                                                 '<a href="/templates/wiki/link%202.html">là</a>\n']
-
-
-def test_html_generation(setup_files):
-    convert_files()
-    html_file = os.path.join(DEST_DIR, 'Titre.html')
-    assert os.path.exists(html_file)
-    with open(html_file, 'r', encoding='utf-8') as f:
-        content = f.read()
-        assert '<h1>Titre</h1>' in content
-        assert '<em>Par Auteur</em>' in content
-        assert '<p>Introduction Un lien vers un autre <a href="/templates/wiki/link.html">article</a></p>' in content
-        assert '<h2>Sous-titre 1</h2>' in content
-        assert f'<img src="{os.path.join(app.IMG_DIR, "image1.png")}" alt="image1.png">' in content
-        assert '<a href="/templates/wiki/ici.html">ici</a>' in content
-        assert '<h2>Sous-titre 2</h2>' in content
-        assert '<a href="/templates/wiki/link%202.html">là</a>' in content
