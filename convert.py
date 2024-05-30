@@ -1,9 +1,10 @@
 import os
 import re
-from app import IMG_DIR as IMAGE_DIR
 
 SOURCE_DIR = 'source_documents'
 DEST_DIR = 'templates/wiki'
+BASE_DIR = os.path.dirname(__file__)
+IMG_DIR = os.path.join(BASE_DIR, "static", "images")
 
 
 class Content:

@@ -1,46 +1,11 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, abort
 import os
-from werkzeug.utils import secure_filename
-import logging
-
 from convert import convert_files
-
-logging.basicConfig(filename='app.log', level=logging.ERROR, format='%(asctime)s %(levelname)s:%(message)s')
 
 app = Flask(__name__)
 
-# ... Code pour la gestion des exceptions et du système de logs ...
-
-UPLOAD_FOLDER = 'uploads'
-ALLOWED_EXTENSIONS = {'ods'}
-BASE_DIR = os.path.dirname(__file__)
-IMG_DIR = os.path.join(BASE_DIR, "static", "images")
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+# Convertir les fichiers lors du démarrage de l'application
 convert_files()
-
-
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-
-@app.route('/upload', methods=['GET', 'POST'])
-def upload_file():
-    if request.method == 'POST':
-        if 'file' not in request.files:
-            return redirect(request.url)
-        file = request.files['file']
-        if file.filename == '':
-            return redirect(request.url)
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('uploaded_file', filename=filename))
-    return render_template('upload.html')
-
-
-@app.route('/uploads/<filename>')
-def uploaded_file(filename):
-    return f'Fichier {filename} uploadé avec succès !'
 
 
 @app.route('/')
