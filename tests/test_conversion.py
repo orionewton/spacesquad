@@ -6,7 +6,6 @@ from convert import Content, convert_files
 
 SOURCE_DIR = 'source_documents'
 DEST_DIR = 'templates/wiki'
-IMAGE_DIR = 'static'
 
 
 @pytest.fixture(scope="module")
@@ -14,7 +13,6 @@ def setup_files():
     # Création des répertoires nécessaires
     os.makedirs(SOURCE_DIR, exist_ok=True)
     os.makedirs(DEST_DIR, exist_ok=True)
-    os.makedirs(IMAGE_DIR, exist_ok=True)
 
     # Exemple de fichier .txt pour les tests
     test_content = '''Auteur
@@ -34,7 +32,7 @@ Paragraphe 2 avec un autre lien @là@link 2@
     yield
 
     # Nettoyage après tests
-    for dir_path in [SOURCE_DIR, DEST_DIR, IMAGE_DIR]:
+    for dir_path in [SOURCE_DIR, DEST_DIR]:
         for filename in os.listdir(dir_path):
             os.remove(os.path.join(dir_path, filename))
         os.rmdir(dir_path)
