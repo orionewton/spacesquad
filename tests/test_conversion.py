@@ -4,7 +4,7 @@ from convert import Content
 
 
 def test_read_file():
-    file_path = os.path.join("doc_tests", "Modele.txt")
+    file_path = os.path.join(os.getcwd(), "doc_tests", "Modele.txt")
     content = Content(file_path)
     assert content.author == "Auteur"
     assert content.title == "Titre"
