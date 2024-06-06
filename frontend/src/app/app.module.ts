@@ -6,7 +6,7 @@ import { WikiComponent } from './wiki/wiki.component';
 import { ArticleComponent } from './article/article.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common'; // Import du CommonModule
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,8 +18,8 @@ import { CommonModule } from '@angular/common'; // Import du CommonModule
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule,
-    CommonModule // Ajout du CommonModule ici
+    RouterModule.forRoot([]),
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
