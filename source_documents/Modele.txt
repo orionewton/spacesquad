@@ -1,9 +1,0 @@
-Auteur
-Titre
-//Introduction//
-**Sous-titre**
-Paragraphe
-
-@phrase à link@Titre du lien@
-
-#Image.png#
