@@ -37,6 +37,14 @@
             }
           },
           "configurations": {
+            "aot": true,
+            "buildOptimizer": true,
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            },
+            "optimization": true,
             "production": {
               "budgets": [
                 {
@@ -51,11 +59,6 @@
                 }
               ],
               "outputHashing": "all"
-            },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
